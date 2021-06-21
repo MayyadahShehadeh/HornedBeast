@@ -20,7 +20,7 @@ this.setState({vote:this.state.vote+1})
            <img src= {this.props.imageUrl} alt={this.props.title}/>
          <p>{this.props.description}</p>
          <Button onClick={this.plusVote} >Vote</Button>
-         ❤️ = {this.state.vote}
+         {/* ❤ = {this.state.vote} */}
 
             </div>
         )
