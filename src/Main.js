@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import HornedBeast from "./HornedBeast";
 
-export class Main extends Component {
+ class Main extends Component {
     render() {
             
         
