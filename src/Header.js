@@ -4,7 +4,7 @@ import React, { Component } from 'react'
     render() {
         return (
             <div><header>
-                <h1>Welcome in Horned Beast </h1>
+                <h1>Welcome in Horned Beasts Gallery</h1>
                 </header>
             </div>
         )
