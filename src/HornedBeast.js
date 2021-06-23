@@ -28,9 +28,9 @@ class HornedBeast extends Component {
     render() {
         console.log(this.state)
         return (
-            <div>
+          
                 <Col>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '20rem' }}>
             <Card.Img variant="top" src= {this.props.imageUrl} alt={this.props.title} width="300px" height="300px" />
             <Card.Body>
                 <Card.Title>{this.props.title}</Card.Title>
@@ -38,26 +38,28 @@ class HornedBeast extends Component {
                 {this.props.description}
                     </Card.Text>
                 <Button variant="primary" onClick={this.plusVote}>Vote</Button>
-                ❤ {this.state.vote}
+                ❤ {this.state.vote} 
+                <Button variant="primary" onClick={this.showModal}>Show Details</Button>
             </Card.Body>
         </Card>
+               
 
                 <Modal show={this.state.show} onHide={this.hideModal}>
-                    <Modal.Header closeButton>
+                    <Modal.Header>
                     <Modal.Title>{this.props.title}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                     <div>
-                    <img src={this.props.imageUrl} alt={this.props.title}/>
-                    {this.props.descreption}
-                     </div>
-                      </Modal.Body>
+                    <img src={this.props.imageUrl} alt={this.props.title}  width="350px" height="300px"/>
+                    <p>{this.props.description}</p>
+                    </div>
+                    </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={this.hideModal}> Close</Button>
+                    <Button variant="secondary" onClick={this.hideModal}> Close</Button>
                     </Modal.Footer>
                 </Modal>
                 </Col>
-            </div>
+         
         )
     }
 }

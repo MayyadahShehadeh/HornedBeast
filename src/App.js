@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import Main from './Main.js';
-// import SelectedBeast from "./SelectedBeast";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -11,8 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
     return (
       <>
         <Header/>
-        {/* <Main> */}
-        {/* <SelectedBeast /> */}
+      
         <Main/>
         <Footer/>
       </>
