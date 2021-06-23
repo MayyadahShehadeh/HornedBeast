@@ -9,7 +9,8 @@ import { Row } from 'react-bootstrap';
             <Row>
            {
                     HornedData.map((beast,index)=>{
-                        return <HornedBeast key={index} title={beast.title}
+                        return <HornedBeast key={index}
+                         title={beast.title}
                          imageUrl={beast.image_url}
                           description={beast.description}
                           vote={0}
