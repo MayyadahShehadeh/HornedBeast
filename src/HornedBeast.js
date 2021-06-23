@@ -9,9 +9,15 @@ class HornedBeast extends Component {
         this.state = {
             vote: props.vote,
             show: false
-        }
+        }}
 
-    }
+    plusVote = () => {
+        this.setState({
+            vote: this.state.vote + 1
+        })}
+
+
+    // ----------------- Show Modal Functions ---------------------------
     showModal = () => {
         this.setState({ show: true });
       };
@@ -19,21 +25,28 @@ class HornedBeast extends Component {
       hideModal = () => {
         this.setState({ show: false });
       };
+//  ------------------------------------------------------------------------
 
-    plusVote = () => {
-        this.setState({
-            vote: this.state.vote + 1
-        })
-    }
+
+
+
+
     render() {
         console.log(this.state)
         return (
+            <>
+           
+           {/*-----------------------------------  Add Cards --------------------------------------------*/}
+
           
-                <Col>
+            <Col>
             <Card style={{ width: '20rem' }}>
             <Card.Img variant="top" src= {this.props.imageUrl} alt={this.props.title} width="300px" height="300px" />
             <Card.Body>
                 <Card.Title>{this.props.title}</Card.Title>
+                <Card.Text>
+                {this.props.horns}
+                    </Card.Text>
                 <Card.Text>
                 {this.props.description}
                     </Card.Text>
@@ -42,7 +55,10 @@ class HornedBeast extends Component {
                 <Button variant="primary" onClick={this.showModal}>Show Details</Button>
             </Card.Body>
         </Card>
-               
+    
+
+
+               {/* ------------------------------------ Add Modal ----------------------------------------------- */}
 
                 <Modal show={this.state.show} onHide={this.hideModal}>
                     <Modal.Header>
@@ -59,7 +75,7 @@ class HornedBeast extends Component {
                     </Modal.Footer>
                 </Modal>
                 </Col>
-         
+                </>
         )
     }
 }
