@@ -45,7 +45,7 @@ class HornedBeast extends Component {
             <Card.Body>
                 <Card.Title>{this.props.title}</Card.Title>
                 <Card.Text>
-                {this.props.horns}
+                <p>Number of Horns: {this.props.horns}</p>
                     </Card.Text>
                 <Card.Text>
                 {this.props.description}
