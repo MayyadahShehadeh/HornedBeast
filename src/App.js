@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
       <>
         <Header/>
       
-        <Main/>
+        <Main filter={this.filter}/>
         <Footer/>
       </>
     )
