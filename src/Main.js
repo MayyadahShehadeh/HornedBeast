@@ -39,32 +39,21 @@ import { Row, Form } from 'react-bootstrap';
          </Form>
          
          {/* -------------------------------------------------------------------------------------- */}
-            {HornedData.map((beast, index) => {
-              return (
-                <>
-               {/* { ((Number(this.state.horns)) === Number(this.horns) && ( */}
-                  <HornedBeast key={index}
-                    title={beast.title}
-                    imageUrl={beast.image_url}
-                    description={beast.description}
-                    horns={beast.horns}
-                    vote={0}
-                  />
+            
+            {
+              HornedData.map((element, i) => {
+                return (
 
+                  (Number(this.state.horns) === element.horns &&
+                    <HornedBeast key={i}
+                      title={element.title} imageUrl={element.image_url} description={element.description} horns={element.horns} vote={0} />
+                  ) || (Number(this.state.horns) === 0 &&
+                    <HornedBeast key={i}
+                      title={element.title} imageUrl={element.image_url} description={element.description} horns={element.horns} vote={0} />
+                  ))
+              }
+              )}
 
-               {/* )) || ((Number(this.state.horns)) === 0 && ( */}
-                 {/* <HornedBeast key={index}
-                   title={beast.title}
-                   imageUrl={beast.image_url}
-                   description={beast.description}
-                   horns={beast.horns}
-                   vote={0} */}
-                 {/* /> */}
-               {/* ))} */}
-</>
-             )}
-             )
-                }
             </Row>
             </>
         )
