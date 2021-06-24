@@ -20,7 +20,9 @@ import { Row, Form } from 'react-bootstrap';
       return (
         <>    
             <Row>
-          {/* -------------------------------- Add Form for num of Horns ---------------------------- */}
+
+          {/* -------------------------------- Add Form for select num of Horns ---------------------------- */}
+
           <Form>
           <Form.Group className="mb-3" controlId="select">
             <Form.Label>Select Number of Horns: </Form.Label>
