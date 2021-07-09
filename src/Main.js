@@ -45,11 +45,16 @@ import { Row, Form } from 'react-bootstrap';
                 return (
 
                   (Number(this.state.horns) === element.horns &&
+                  
                     <HornedBeast key={i}
-                      title={element.title} imageUrl={element.image_url} description={element.description} horns={element.horns} vote={0} />
-                  ) || (Number(this.state.horns) === 0 &&
+                      title={element.title} imageUrl={element.image_url} description={element.description} 
+                      horns={element.horns} vote={0} />
+                 
+                      ) || (Number(this.state.horns) === 0 &&
+                    
                     <HornedBeast key={i}
-                      title={element.title} imageUrl={element.image_url} description={element.description} horns={element.horns} vote={0} />
+                      title={element.title} imageUrl={element.image_url} description={element.description}
+                       horns={element.horns} vote={0} />
                   ))
               }
               )}
